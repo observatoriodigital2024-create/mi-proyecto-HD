@@ -1,30 +1,33 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paralaje narrativo</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
- <body>
+<section class="hero">
+  <h1>Observatorio Digital 2024</h1>
+  <p>Una exploración visual sobre conectividad, uso de tecnología y transformación digital.</p>
+  <a href="#dashboard" class="btn">Explorar datos</a>
+</section>
 
-  <!-- Hero -->
-  <section>
-  ...
-  </section>
+<section class="scrolly-observable">
+  <div class="scrolly-text">
+    <div class="step" data-step="0">
+      <h2>1. Conectividad digital</h2>
+      <p>La conectividad es más alta en el norte y centro del país.</p>
+    </div>
 
-  <!-- AQUÍ pegas el scrollytelling -->
-  <section class="scrolly-observable">
-  ...
-  </section>
+    <div class="step" data-step="1">
+      <h2>2. Crecimiento mensual</h2>
+      <p>El uso digital aumenta de forma constante durante el año.</p>
+    </div>
 
-  <!-- scripts -->
+    <div class="step" data-step="2">
+      <h2>3. Plataformas más usadas</h2>
+      <p>Las redes sociales concentran la mayor parte de la actividad digital.</p>
+    </div>
+  </div>
+
+  <div class="scrolly-graphic">
+    <div id="observableChart"></div>
+  </div>
+</section>
+<body>
   <script type="module">
-  ...
-  </script>
-
-</body>
-<script type="module">
 import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot/+esm";
 
 const chartContainer = document.querySelector("#observableChart");
@@ -190,3 +193,4 @@ steps.forEach(step => observer.observe(step));
 
 activarPaso(0);
 </script>
+</body>
